@@ -1,15 +1,7 @@
 # Write a method to replace all spaces in a string with %20. You may assume that the string has sufficient space at the end, and that you are give the "true" length of the string.
 
-# If we were writing this in C with fixed-length arrays
-
-# This one was really hard, because it's the usual situation of pushing pointers around
-# The python version is so much easier
-
-# This example also proves that I can't track multiple pointer logic in my head
-# I need some method to write out or I get immediately lost
-# I also didn't know these concepts:
-# reversed(range(10)) will count from 9 back to zero
-# my_list[2:5] = "abc" will replace indices 2, 3, 4 with a, b, c
+# To solve this, you need to write down how you want to use the pointer
+# You rearrange items within a fixed-length array during iteration
 
 def urlify_c(str, true_length):
     list_string = list(str)
@@ -40,3 +32,11 @@ def urlify_python(str, true_length):
 
 answer = urlify_python("Mr John Smith    ", 13)
 print(answer)
+
+# Take Home:
+# You have to know how you are moving pointers around
+# Personally, I can't track multiple pointers in my head
+# I need some method to write out or I get immediately lost
+# I also didn't know these concepts:
+# reversed(range(10)) will count from 9 back to zero
+# my_list[2:5] = "abc" will replace indices 2, 3, 4 with a, b, c

@@ -13,15 +13,16 @@ def is_pal_permutation1(str):
             letter_counts[letter] += 1
         else:
             letter_counts[letter] = 1
-    
+
     letter_count_values = letter_counts.values()
     check_odds = [count for count in letter_count_values if count % 2 != 0]
     if len(check_odds) > 1:
         return False
-    
+
     return True
 
 # Refactored version (less memory overhead, less iteration, but harder to understand)
+
 
 def is_pal_permutation2(str):
 
@@ -29,11 +30,11 @@ def is_pal_permutation2(str):
     odd_counts = 0
 
     for letter in str:
-        if letter.isalpha(): 
+        if letter.isalpha():
             letter = letter.lower()
             if letter in letter_counts:
                 letter_counts[letter] += 1
-                if letter_counts[letter] %2 != 0:
+                if letter_counts[letter] % 2 != 0:
                     odd_counts += 1
                 else:
                     odd_counts -= 1
@@ -44,9 +45,8 @@ def is_pal_permutation2(str):
     if odd_counts > 1:
         return False
 
-    
     return True
-    
+
 
 value = is_pal_permutation2("aaa")
 print("aaa", value)
@@ -66,3 +66,7 @@ print("abcdcba", value)
 value = is_pal_permutation2("Tact Coa")
 print("Tact Coa", value)
 
+
+# Take Home
+# This problem is more about having the insight about what a palindrome is
+# Once you know that it has to have duplicates of all letters and at most one unique letter, the rest is easy

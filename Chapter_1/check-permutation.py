@@ -29,3 +29,8 @@ answer3 = is_permutation("abc", "abb")
 print("Should be True", answer1)
 print("Should be False", answer2)
 print("Should be False", answer3)
+
+
+# Take Home:
+# If order doesn't matter, just put letters into a hash table
+# Then you can compare the table values
